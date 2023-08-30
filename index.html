@@ -3,6 +3,7 @@
   <head>
     <title>External SVG with url(#foo)</title>
     <meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body style="max-width: 40em;">
@@ -13,16 +14,17 @@
 		</p>
 		<p>
 			The first link illustrates correct usage, where the external SVG file includes both the named
-			filter, and the element that references it. This example should render a white circle on a
-			white background, surrounded by a blurred gray shadow. This example works correctly in Blink
-			and Gecko, but fails in WebKit.
+			filter, and the element that references it. This test should render a white circle on a	white
+			background, surrounded by a blurred gray shadow. This example works correctly in Blink and
+			Gecko, but fails in WebKit (as of 2023/08/30).
 		</p>
 		<p>
-			The second link illustrates the incorrect usage that WebKit seemsto expect, where the external
-			SVG file includes the element that references the filter, but the filter definition is
-			present in the importing document, in an inline SVG. This example should render an entirely
-			white	image, as both the circle and background are white, and the filter definition should be
-			found	missing. This example works correctly in Blink and Gecko, but fails in WebKit.
+			The second link illustrates the incorrect usage that WebKit seems to expect, where the
+			external SVG file includes the element that references the filter, but the filter definition
+			is present in the importing document instead, in an inline SVG. This test should render an
+			entirely white image, as both the circle and background are white, and the filter definition
+			should be	found	missing. This example works correctly in Blink and Gecko, but fails in WebKit
+			(as of 2023/08/30).
 		</p>
 		<p>
 			<a href="correct.html">Correct usage — filter definition inside external SVG</a>
