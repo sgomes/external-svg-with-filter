@@ -20,10 +20,9 @@
 		<p>
 			The second link illustrates the incorrect usage that WebKit seemsto expect, where the external
 			SVG file includes the element that references the filter, but the filter definition is
-			present in the importing document, in an inline SVG. This example should an entirely white
-			image, as both the circle and background are white, and the filter definition should be found
-			missing. This example works correctly in Blink and Gecko, but fails in WebKit by rendering
-			a white circle on a	white background, surrounded by a blurred gray shadow.
+			present in the importing document, in an inline SVG. This example should render an entirely
+			white	image, as both the circle and background are white, and the filter definition should be
+			found	missing. This example works correctly in Blink and Gecko, but fails in WebKit.
 		</p>
 		<p>
 			<a href="correct.html">Correct usage — filter definition inside external SVG</a>
