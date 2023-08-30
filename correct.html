@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>External SVG with url(#foo): correct usage</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+		<svg
+			width="300"
+			height="300"
+			style="border: 1px solid green;"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<use href="external.svg#circle" />
+		</svg>
+  </body>
+</html>

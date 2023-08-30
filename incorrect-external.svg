@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" style="height: 0; margin: 0;">
+  <defs>
+    <symbol id="circle" width="300" height="300" viewBox="0 0 300 300" fill="#ffffff">
+      <circle fill="#ffffff" filter="url(#shadow)" cx="150" cy="150" r="125" />
+    </symbol>
+  </defs>
+</svg>

@@ -6,13 +6,28 @@
   </head>
 
   <body>
-		<svg
-			width="300"
-			height="300"
-			style="border: 1px solid green;"
-			xmlns="http://www.w3.org/2000/svg"
-		>
-			<use href="external.svg#circle" />
-		</svg>
+		<p>
+			This example page illustrates a bug in WebKit, where an SVG loaded from an external resource
+			via SVG <code>&lt;use&gt;</code> will look for named elements in the importing document,
+			rather than within itself.
+		</p>
+		<p>
+			The first link illustrates correct usage, where the external SVG file includes both the named
+			filter, and the element that references it. This example should render a white circle on a
+			white background, surrounded by a blurred gray shadow. This example works correctly in Blink
+			and Gecko, but fails in WebKit.
+		</p>
+		<p>
+			The second link illustrates the incorrect usage that WebKit seemsto expect, where the external
+			SVG file includes the element that references the filter, but the filter definition is
+			present in the importing document, in an inline SVG. This example should an entirely white
+			image, as both the circle and background are white, and the filter definition should be found
+			missing. This example works correctly in Blink and Gecko, but fails in WebKit by rendering
+			a white circle on a	white background, surrounded by a blurred gray shadow.
+		</p>
+		<p>
+			<a href="correct.html">Correct usage — filter definition inside external SVG</a>
+			<a href="incorrect.html">Incorrect usage — filter definition inside importing document</a>
+		</p>
   </body>
 </html>
